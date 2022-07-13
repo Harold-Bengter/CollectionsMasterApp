@@ -73,13 +73,14 @@ namespace CollectionsMasterConsoleUI
             var myList = new List<int>();
 
             //TODO: Print the capacity of the list to the console
-            Console.WriteLine($"The capacity is {myList}");
+            Console.WriteLine($"The capacity is {myList.Capacity}");
+            Console.WriteLine($"The count is {myList.Count}");
 
             //TODO: Populate the List with 50 random numbers between 0 and 50 you will need a method for this            
             Populater(myList);
-
+            NumberPrinter(myList);
             //TODO: Print the new capacity
-            Console.WriteLine($"New list capacity is {myList}");
+            Console.WriteLine($"New list capacity is {myList.Capacity}");
 
             Console.WriteLine("---------------------");
 
@@ -150,7 +151,7 @@ namespace CollectionsMasterConsoleUI
 
             for (int i = 0; i < 50; i++)
             {
-                numberList.Add(rng.Next(0, 50));
+                numberList.Add(rng.Next(0, 51));
             }
         }
 
@@ -160,7 +161,7 @@ namespace CollectionsMasterConsoleUI
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = rng.Next(0, 50);
+                numbers[i] = rng.Next(0, 51);
             }
 
         }
